@@ -30,10 +30,10 @@ My research interest lies at the intersection of control, robotics, and learning
 
 <p>
   <span class="red-bold">
-   I will be joining the Civil and Environmental Engineering Department (CEE) at UCLA as an Assistant Professor in New Mobility starting July 2025! 
+   I will be joining the Civil and Environmental Engineering Department (CEE) at UCLA as an Assistant Professor in New Mobility! 
    </span>
    <strong>
-   I'm recruiting PhD students for Fall25/Spring25/Fall26 to work on autonomous driving and robotics. If you're interested, please feel free to reach out. I'm also looking for postdocs, master's, and undergraduate students to join my lab. For more details, please check the <a href="/opportunities/">Prospective Students</a> page.
+   I'm recruiting PhD students for Spring 2025 and Fall 2026 to work on autonomous driving and robotics. If you're interested, please feel free to reach out. I'm also looking for postdocs, master's, and undergraduate students to join my lab. For more details, please check the <a href="/opportunities/">Prospective Students</a> page.
     </strong>
 </p>
 
