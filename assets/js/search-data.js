@@ -96,6 +96,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-womd-reasoning-a-large-scale-dataset-and-benchmark-for-interaction-and-intention-reasoning-in-driving-is-accepted-for-icml-2025-you-can-download-the-womd-reasoning-dataset-from-waymo-s-official-site-checkout-our-paper-and-code-for-more-details",
           title: 'Our paper “WOMD-Reasoning: A Large-Scale Dataset and Benchmark for Interaction and Intention Reasoning...',
           description: "",
+          section: "News",},{id: "news-three-papers-on-social-robot-navigation-socialnav-sub-and-composablenav-and-learning-from-human-intervention-mereq-are-accepted-for-corl-2025",
+          title: 'Three papers on social robot navigation (SocialNav-SUB and ComposableNav) and learning from human...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
