@@ -32,7 +32,7 @@ My research interest lies at the intersection of control, robotics, and learning
   <span class="red-bold">
    </span>
    <strong>
-   I'm recruiting PhD students for Fall 2026 to work on autonomous driving and robotics. If you're interested, please feel free to reach out. I'm also looking for postdocs, master's, and undergraduate students to join my lab. For more details, please check the <a href="/opportunities/">Prospective Students</a> page.
+   I'm recruiting PhD students for Fall 2026 to work on autonomous driving and robotics. If you're interested, please feel free to reach out. Meanwhile, please directly submit your applications through the <a href="https://www.cee.ucla.edu/graduate-admissions/" target="_blank">UCLA CEE Graduate Admissions portal</a> by <span style="color: red; font-weight: bold;">December 15, 2025</span> and list me as a potential adviser. I'm also looking for postdocs, master's, and undergraduate students to join my lab. For more details, please check the <a href="/opportunities/">Prospective Students</a> page.
     </strong>
 </p>
 
