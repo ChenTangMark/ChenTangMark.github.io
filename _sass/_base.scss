@@ -730,6 +730,8 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
+        width: 250px;
+        max-width: 100%;
       }
 
       .abbr {
@@ -737,6 +739,7 @@ footer.sticky-bottom {
 
         abbr {
           display: inline-block;
+          max-width: 250px;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
           color: var(--global-card-bg-color) !important;

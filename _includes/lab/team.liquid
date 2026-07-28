@@ -1,0 +1,75 @@
+{% comment %}
+  Usage: {% include lab/team.liquid section="pi" %}
+  section options: pi, phd, masters, undergrad, alumni
+{% endcomment %}
+
+{% assign section = include.section %}
+{% assign members = site.data.lab_members[section] %}
+
+{% if members and members.size > 0 %}
+<div class="team-section {% if section == 'pi' %}pi{% elsif section == 'alumni' %}alumni{% endif %}">
+  <h2>
+    {% case section %}
+      {% when 'pi' %}Principal Investigator
+      {% when 'members' %}Members
+      {% when 'phd' %}PhD Students
+      {% when 'masters' %}Master's Students
+      {% when 'undergrad' %}Undergraduate Students
+      {% when 'alumni' %}Alumni
+    {% endcase %}
+  </h2>
+
+  <div class="team-grid">
+    {% for member in members %}
+      <div class="team-member">
+        <div class="member-photo {% unless member.image %}placeholder{% endunless %}">
+          {% if member.image %}
+            <img src="{{ member.image | prepend: 'assets/img/lab/team/' | relative_url }}" alt="{{ member.name }}">
+          {% else %}
+            <i class="fa-solid fa-user"></i>
+          {% endif %}
+        </div>
+
+        {% if section == 'alumni' %}
+          <div class="member-info">
+        {% endif %}
+
+        <div class="member-name">
+          {% if member.website %}
+            <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
+          {% else %}
+            {{ member.name }}
+          {% endif %}
+        </div>
+
+        <div class="member-title">{{ member.title }}</div>
+
+        {% if section == 'alumni' and member.current_position %}
+          <div class="member-position">{{ member.current_position }}</div>
+        {% endif %}
+
+        {% if section != 'alumni' %}
+          <div class="member-links">
+            {% if member.email %}
+              <a href="mailto:{{ member.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            {% endif %}
+            {% if member.scholar %}
+              <a href="{{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            {% endif %}
+            {% if member.github %}
+              <a href="{{ member.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            {% endif %}
+            {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if section == 'alumni' %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

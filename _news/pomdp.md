@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper ["Learning online belief prediction for efficient POMDP planning in autonomous driving"](https://arxiv.org/pdf/2401.15315) is accepted for RA-L!
+The paper ["Learning online belief prediction for efficient POMDP planning in autonomous driving"](https://arxiv.org/pdf/2401.15315) is accepted for RA-L!

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I gave an invited talk at the [Workshop on Social, Interactive and Safe Behaviors for AVs: Benchmarks, Models, and Applications](https://sites.google.com/view/iv2023-social) at IEEE IV 2023!
+Dr. Tang gave an invited talk at the [Workshop on Social, Interactive and Safe Behaviors for AVs: Benchmarks, Models, and Applications](https://sites.google.com/view/iv2023-social) at IEEE IV 2023!

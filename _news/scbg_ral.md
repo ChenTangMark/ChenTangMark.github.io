@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper ["Editing driver character: socially-controllable behavior generation for interactive traffic simulation"](https://arxiv.org/abs/2303.13830) is accepted for RA-L! 
+The paper ["Editing driver character: socially-controllable behavior generation for interactive traffic simulation"](https://arxiv.org/abs/2303.13830) is accepted for RA-L! 

@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I am selected as one of the 30 [Robotics Pioneers](https://sites.google.com/view/rsspioneers2023/participants?authuser=0) for 2023!
+Dr. Tang is selected as one of the 30 [Robotics Pioneers](https://sites.google.com/view/rsspioneers2023/participants?authuser=0) for 2023!
 

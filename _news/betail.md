@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper ["BeTAIL: Behavior transformer adversarial imitation learning from human racing gameplay"](https://arxiv.org/abs/2402.14194) is accepted for RA-L. Check out our [website](https://sites.google.com/berkeley.edu/BeTAIL/home) and [code](https://github.com/cwj22/BeT-AIL)!
+The paper ["BeTAIL: Behavior transformer adversarial imitation learning from human racing gameplay"](https://arxiv.org/abs/2402.14194) is accepted for RA-L. Check out the [website](https://sites.google.com/berkeley.edu/BeTAIL/home) and [code](https://github.com/cwj22/BeT-AIL)!

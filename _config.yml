@@ -187,6 +187,7 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - assets/jupyter/
   - vendor
 keep_files:
   - CNAME
@@ -317,6 +318,7 @@ filtered_bibtex_keywords:
     supp,
     video,
     website,
+    keywords,
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
@@ -437,7 +439,10 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@300;400;700&family=Material+Icons&display=swap"
+    preconnect:
+      - "https://fonts.googleapis.com"
+      - "https://fonts.gstatic.com"
   highlightjs:
     integrity:
       css:

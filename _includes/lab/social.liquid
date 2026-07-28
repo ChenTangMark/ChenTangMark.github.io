@@ -1,0 +1,38 @@
+<div class="lab-social">
+  <div class="social-links">
+    {% if site.data.lab_social.github %}
+      <a href="{{ site.data.lab_social.github }}" target="_blank" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    {% endif %}
+
+    {% if site.data.lab_social.youtube %}
+      <a href="{{ site.data.lab_social.youtube }}" target="_blank" title="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+        <span>YouTube</span>
+      </a>
+    {% endif %}
+
+    {% if site.data.lab_social.twitter %}
+      <a href="{{ site.data.lab_social.twitter }}" target="_blank" title="X/Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+        <span>X/Twitter</span>
+      </a>
+    {% endif %}
+
+    {% if site.data.lab_social.linkedin %}
+      <a href="{{ site.data.lab_social.linkedin }}" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    {% endif %}
+
+    {% if site.data.lab_social.huggingface %}
+      <a href="{{ site.data.lab_social.huggingface }}" target="_blank" title="Hugging Face">
+        <i class="fa-solid fa-face-grin-wide"></i>
+        <span>Hugging Face</span>
+      </a>
+    {% endif %}
+  </div>
+</div>

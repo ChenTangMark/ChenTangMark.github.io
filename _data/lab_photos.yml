@@ -1,0 +1,26 @@
+# TAMS Lab Photos
+# Carousel images for the lab homepage header
+# Homepage images for the photo slideshow section
+# Gallery images for the photos page
+
+carousel:
+  # - image: photo1.jpg  # Place images in assets/img/lab/carousel/
+  #   caption: "Lab group photo - Fall 2024"
+  # - image: photo2.jpg
+  #   caption: "Research demonstration"
+
+homepage:
+  # Add photos here for the homepage slideshow
+  # Place images in assets/img/lab/photos/
+  - image: royce-hall.jpg
+    caption: "TAMS Lab launches at UCLA, November 2025"
+  # - image: group_photo.jpg
+  #   caption: "Summer 2025"
+
+gallery:
+  # - image: event1.jpg  # Place images in assets/img/lab/gallery/
+  #   caption: "Lab retreat 2024"
+  #   date: 2024-09-15
+  # - image: event2.jpg
+  #   caption: "Paper celebration"
+  #   date: 2024-06-01

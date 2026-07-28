@@ -1,0 +1,52 @@
+<div class="lab-carousel">
+  <div class="carousel-container">
+    {% for photo in site.data.lab_photos.carousel %}
+      <div class="carousel-slide {% if forloop.first %}active{% endif %}">
+        <img src="{{ photo.image | prepend: 'assets/img/lab/carousel/' | relative_url }}" alt="{{ photo.caption }}">
+        {% if photo.caption %}
+          <div class="carousel-caption">{{ photo.caption }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="carousel-prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="carousel-next" onclick="changeSlide(1)">&#10095;</button>
+
+  <div class="carousel-nav">
+    {% for photo in site.data.lab_photos.carousel %}
+      <span class="carousel-dot {% if forloop.first %}active{% endif %}" onclick="goToSlide({{ forloop.index0 }})"></span>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+
+function showSlide(n) {
+  if (slides.length === 0) return;
+
+  currentSlide = (n + slides.length) % slides.length;
+
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (dots[i]) dots[i].classList.remove('active');
+  });
+
+  slides[currentSlide].classList.add('active');
+  if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+  showSlide(currentSlide + direction);
+}
+
+function goToSlide(n) {
+  showSlide(n);
+}
+
+// Auto-advance slides every 5 seconds
+setInterval(() => changeSlide(1), 5000);
+</script>

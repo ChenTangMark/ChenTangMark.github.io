@@ -1,0 +1,25 @@
+# TAMS Lab Research Areas
+
+- title: "Evaluating Autonomous Systems Before Deployment"
+  keywords_tag: evaluation
+  slug: evaluation
+  tagline: "Scalable evaluation via generative simulation, diffusion models, and benchmarks"
+  image: evaluation.jpg
+  description: |
+    Autonomous systems must operate safely in complex human environments, but real-world testing is limited and risky. We develop scalable evaluation methods — including **generative simulation** for interactive environments, **diffusion models** for trajectory prediction and scenario generation, and **off-policy evaluation** techniques — to rigorously assess autonomous system performance before deployment. We also build **benchmarks and datasets** for driving reasoning to enable standardized evaluation across the community.
+
+- title: "Adaptive Autonomy for Human Environments"
+  keywords_tag: adaptation
+  slug: adaptation
+  tagline: "Online policy customization via residual RL, imitation learning, and human-aware control"
+  image: adaptation.jpg
+  description: |
+    Learning-based autonomous systems must adapt to human behavior, safety constraints, and changing objectives during deployment. We develop methods that combine **residual reinforcement learning** with control theory for online policy customization, enable **offline-to-online RL** for safe deployment, and leverage **imitation learning** from human demonstrations. Our work also explores how **foundation models** can operate under real-time control constraints to produce robust, human-aware autonomy.
+
+- title: "Autonomous Systems in Infrastructure Networks"
+  keywords_tag: infrastructure
+  slug: infrastructure
+  tagline: "Cooperative driving, language communication, and system-level optimization"
+  image: infrastructure.jpg
+  description: |
+    When autonomous systems deploy at scale, they interact with large-scale transportation and infrastructure systems. We study how autonomous agents affect and integrate into these networks through **cooperative autonomous driving** via language communication, **infrastructure-aware autonomy**, and **system-level optimization** for safety and efficiency in human-AI mobility systems.

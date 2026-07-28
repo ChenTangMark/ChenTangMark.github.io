@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="post" style="padding-top: 0 !important;">
+  <header class="post-header" style="text-align: center; margin-top: 0.5rem !important; margin-bottom: 0 !important; padding-bottom: 0 !important;">
+    <div class="lab-logo-image" style="margin-bottom: 2rem;">
+      <img src="{{ '/assets/img/lab/tams-logo.png' | relative_url }}" alt="TAMS Lab Logo" style="max-width: 450px; width: 100%; height: auto;">
+    </div>
+  </header>
+
+  <article style="margin-top: 0 !important;">
+    {% if site.data.lab_photos.homepage and site.data.lab_photos.homepage.size > 0 %}
+      <div style="margin-top: 0 !important;">
+        {% include lab/photo_slideshow.liquid %}
+      </div>
+    {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
+
+    {% if site.news != blank %}
+      <h2>news</h2>
+      {% include lab/news.liquid %}
+    {% endif %}
+
+    {% include lab/social.liquid %}
+  </article>
+</div>

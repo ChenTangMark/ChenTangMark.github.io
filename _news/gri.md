@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper ["Grounded relational inference: Domain knowledge-driven explainable autonomous driving"](https://arxiv.org/abs/2102.11905) is accepted for IEEE Transactions on Intelligent Transportation Systems (T-ITS)!
+The paper ["Grounded relational inference: Domain knowledge-driven explainable autonomous driving"](https://arxiv.org/abs/2102.11905) is accepted for IEEE Transactions on Intelligent Transportation Systems (T-ITS)!

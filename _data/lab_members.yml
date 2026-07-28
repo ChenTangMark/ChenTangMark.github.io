@@ -1,0 +1,59 @@
+# TAMS Lab Team Members
+# Add team members in each category
+
+pi:
+  - name: Chen Tang
+    title: Assistant Professor
+    image: chen_tang.jpg
+    website: /
+    email: ctangac@ucla.edu
+    scholar: https://scholar.google.com/citations?user=x78TL58AAAAJ
+    linkedin: https://www.linkedin.com/in/chen-tang-08377b5b
+
+# All non-PI members share one category for now (split into phd/masters/undergrad later as the lab grows)
+members:
+  - name: Seunghun Oh
+    title: PhD Student
+    image: seunghun_oh.jpg
+    website: https://alvin0808.github.io
+    email: seunghun@g.ucla.edu
+    scholar: https://scholar.google.com/citations?user=gw7kO4IAAAAJ
+    linkedin: https://www.linkedin.com/in/seunghun-oh-6913b7381/
+  - name: Ruopeng Huang
+    title: PhD Student
+    image: ruopeng_huang.jpg
+    website: https://huangruopeng.github.io/
+    email: ruopengh@g.ucla.edu
+    scholar: https://scholar.google.com/citations?user=b3PTzgcAAAAJ
+    linkedin: https://www.linkedin.com/in/ruopeng-huang-3295a2253/
+  - name: Dijie Zhu
+    title: Master's Student
+    image: dijie_zhu.jpg
+    website: https://dijiezhu.github.io/
+    email: dijie@ucla.edu
+    linkedin: https://www.linkedin.com/in/dijie-zhu-045a4a288/
+  - name: Rui Gao
+    title: Master's Student
+    image: rui_gao.png
+    website: https://rwigie.github.io/
+    email: rgao727@ucla.edu
+  - name: Jonathan Li
+    title: Undergraduate Researcher
+    image: jonathan_li.png
+    website: https://sites.google.com/view/jonathan-li/
+    email: jonathanli2794@gmail.com
+  - name: Chong Han
+    title: Undergraduate Researcher
+    image: chong_han.jpg
+    email: chongh3814@g.ucla.edu
+  - name: Jiali Chen
+    title: Undergraduate Researcher
+    image: jiali_chen.jpg
+    email: jialic@g.ucla.edu
+
+alumni:
+  # - name: Former Student
+  #   title: "PhD 2024"
+  #   image: placeholder.jpg
+  #   website: https://...
+  #   current_position: "Postdoc at MIT"

@@ -1,0 +1,52 @@
+<div class="photo-slideshow">
+  <div class="slideshow-container">
+    {% for photo in site.data.lab_photos.homepage %}
+      <div class="slide {% if forloop.first %}active{% endif %}">
+        <img src="{{ '/assets/img/lab/photos/' | append: photo.image | relative_url }}" alt="{{ photo.caption }}">
+        {% if photo.caption %}
+          <div class="slide-caption">{{ photo.caption }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <button class="slide-prev" onclick="changePhotoSlide(-1)">&#10094;</button>
+    <button class="slide-next" onclick="changePhotoSlide(1)">&#10095;</button>
+  </div>
+
+  <div class="slideshow-dots">
+    {% for photo in site.data.lab_photos.homepage %}
+      <span class="dot {% if forloop.first %}active{% endif %}" onclick="goToPhotoSlide({{ forloop.index0 }})"></span>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+let photoSlideIndex = 0;
+const photoSlides = document.querySelectorAll('.photo-slideshow .slide');
+const photoDots = document.querySelectorAll('.photo-slideshow .dot');
+
+function showPhotoSlide(n) {
+  if (photoSlides.length === 0) return;
+
+  photoSlideIndex = (n + photoSlides.length) % photoSlides.length;
+
+  photoSlides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (photoDots[i]) photoDots[i].classList.remove('active');
+  });
+
+  photoSlides[photoSlideIndex].classList.add('active');
+  if (photoDots[photoSlideIndex]) photoDots[photoSlideIndex].classList.add('active');
+}
+
+function changePhotoSlide(direction) {
+  showPhotoSlide(photoSlideIndex + direction);
+}
+
+function goToPhotoSlide(n) {
+  showPhotoSlide(n);
+}
+
+// Auto-advance slides every 5 seconds
+setInterval(() => changePhotoSlide(1), 5000);
+</script>

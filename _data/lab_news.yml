@@ -1,0 +1,17 @@
+# TAMS Lab News
+# Add news items with date, content, and optional link
+
+- date: 2025-01-15
+  content: "TAMS Lab website is now live!"
+
+- date: 2025-01-01
+  content: "Prof. Chen Tang joins UCLA CEE as Assistant Professor."
+
+# Example news items:
+# - date: 2025-03-15
+#   content: "Paper accepted to ICRA 2025!"
+#   link: /lab/publications/
+
+# - date: 2025-02-01
+#   content: "Welcome new PhD student [Name]!"
+#   link: /lab/people/

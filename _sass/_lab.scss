@@ -1,0 +1,655 @@
+/*******************************************************************************
+ * Styles for the TAMS Lab section
+ * Using simplified 4-level font system: Large (24px), Medium (18px), Base (14px), Small (12px)
+ ******************************************************************************/
+
+// Lab-specific variables
+$lab-primary: #2774AE; // UCLA Blue
+$lab-secondary: #005587; // Darker Blue
+$lab-accent: #FFD100; // UCLA Gold
+$lab-light-bg: #f8f9fa;
+
+// Font sizes (matching _base.scss)
+$font-large: 24px;
+$font-medium: 18px;
+$font-base: 16px;
+$font-small: 14px;
+
+// Lab Logo (in post-header)
+.lab-logo {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-align: center;
+
+  .lab-logo-tams {
+    color: $lab-primary;
+  }
+
+  .lab-logo-lab {
+    color: $lab-secondary;
+    font-weight: 300;
+  }
+}
+
+// Navigation Bar Overrides
+#navbar {
+  .navbar-brand {
+    font-size: $font-large;
+    font-weight: 700;
+  }
+
+  .nav-link {
+    font-size: $font-medium;
+  }
+}
+
+// Photo Carousel
+.lab-carousel {
+  margin: 2rem 0;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      height: 250px;
+    }
+  }
+
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+
+    &.active {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 1rem;
+      font-size: $font-small;
+    }
+  }
+
+  .carousel-nav {
+    text-align: center;
+    padding: 1rem 0;
+
+    .carousel-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: var(--global-divider-color);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &.active {
+        background: $lab-primary;
+      }
+    }
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: $font-medium;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+}
+
+// Lab Social Links
+.lab-social {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--global-divider-color);
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: $font-base;
+      color: var(--global-text-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      i {
+        font-size: $font-medium;
+      }
+
+      &:hover {
+        color: $lab-primary;
+      }
+    }
+  }
+}
+
+// Team Grid
+.team-section {
+  margin: 3rem 0;
+
+  h2 {
+    font-size: $font-large;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    color: $lab-primary;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $lab-primary;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .team-member {
+    text-align: center;
+
+    .member-photo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--global-divider-color);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-large;
+        color: var(--global-text-color-light);
+      }
+    }
+
+    .member-name {
+      font-size: $font-medium;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+
+      a {
+        color: var(--global-text-color);
+        text-decoration: none;
+
+        &:hover {
+          color: $lab-primary;
+        }
+      }
+    }
+
+    .member-title {
+      font-size: $font-small;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .member-links {
+      font-size: $font-medium;
+
+      a {
+        color: var(--global-text-color-light);
+        margin: 0 0.25rem;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $lab-primary;
+        }
+      }
+    }
+  }
+}
+
+// PI Section (larger)
+.team-section.pi {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .team-member {
+    .member-photo {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+// Alumni Section
+.team-section.alumni {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .team-member {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+
+    .member-photo {
+      width: 60px;
+      height: 60px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .member-info {
+      .member-name {
+        font-size: $font-base;
+      }
+
+      .member-title {
+        font-size: $font-small;
+      }
+
+      .member-position {
+        font-size: $font-small;
+        color: var(--global-text-color-light);
+        font-style: italic;
+      }
+    }
+  }
+}
+
+// Research Areas
+.research-area {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    font-size: $font-medium;
+    font-weight: 700;
+    color: $lab-primary;
+    margin-bottom: 1rem;
+  }
+
+  .research-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}
+
+
+// Photo Gallery
+.photo-gallery {
+  margin: 2rem 0;
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 4/3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 0.5rem;
+      font-size: $font-small;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .gallery-caption {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Photo Slideshow (ILIAD-style)
+.photo-slideshow {
+  margin: 0 0 2rem;
+
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .slide {
+      display: none;
+      position: relative;
+
+      &.active {
+        display: block !important;
+      }
+
+      img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        display: block;
+
+        @media (max-width: 768px) {
+          height: 375px;
+        }
+      }
+
+      .slide-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 0.75rem 1rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .slide-prev,
+  .slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .slide-prev {
+    left: 0;
+  }
+
+  .slide-next {
+    right: 0;
+  }
+
+  .slideshow-dots {
+    text-align: center;
+    padding: 1rem 0;
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      background: var(--global-divider-color);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &.active,
+      &:hover {
+        background: var(--global-text-color);
+      }
+    }
+  }
+}
+
+// Join Us Page
+.join-section {
+  margin: 2rem 0;
+
+  h3 {
+    font-size: $font-medium;
+    font-weight: 700;
+    color: $lab-primary;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .apply-button {
+    display: inline-block;
+    background: $lab-primary;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: $font-base;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $lab-secondary;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// Shared profile title style (used by personal homepage and lab homepage)
+.profile-title {
+  font-size: $font-medium;
+  font-weight: 400;
+  color: var(--global-text-color-light);
+  margin-bottom: 2rem;
+}
+
+// Minimal Personal Homepage
+.minimal-home {
+  text-align: center;
+  padding: 3rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .profile-name {
+    font-size: $font-large;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-intro {
+    text-align: left;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .profile-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: $font-base;
+      color: var(--global-text-color);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+
+      i {
+        font-size: $font-medium;
+      }
+
+      &:hover {
+        color: $lab-primary;
+        border-color: $lab-primary;
+      }
+    }
+  }
+}
+
+// Contact Page
+.contact-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  h1 {
+    font-size: $font-large;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    margin-bottom: 2rem;
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+
+      i {
+        font-size: $font-medium;
+        color: $lab-primary;
+        margin-right: 1rem;
+        width: 30px;
+        text-align: center;
+      }
+
+      .contact-details {
+        h3 {
+          font-size: $font-medium;
+          font-weight: 700;
+          margin-bottom: 0.25rem;
+          margin-top: 0;
+        }
+
+        p {
+          margin: 0;
+
+          a {
+            color: $lab-primary;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

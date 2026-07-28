@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started as a Postdoctoral Fellow in LARG at UT Austin!
+Dr. Tang started as a Postdoctoral Fellow in LARG at UT Austin!
