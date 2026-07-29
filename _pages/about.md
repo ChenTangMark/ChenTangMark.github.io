@@ -2,7 +2,7 @@
 layout: minimal_home
 title: About
 permalink: /
-subtitle: Assistant Professor in New Mobility at UCLA
+subtitle: Assistant Professor in the CEE Department at UCLA
 
 profile:
   image: prof_pic.jpg

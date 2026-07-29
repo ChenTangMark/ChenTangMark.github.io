@@ -1,25 +1,25 @@
 # TAMS Lab Research Areas
 
-- title: "Evaluating Autonomous Systems Before Deployment"
+- title: "Developing Physical AI Systems for Real‑Time Autonomy"
+  keywords_tag: realtime
+  slug: realtime
+  tagline: "Co-designing AI models and closed-loop control so autonomous systems can think and act continuously within real-time computing constraints"
+  image: realtime.jpg
+  description: |
+    Modern AI models offer powerful capabilities for perception, reasoning, and action, but their computation can be too slow and unpredictable for physical systems with limited onboard resources. A robot cannot pause the world while waiting for inference or communication to finish. We co-design learning and control so delayed reasoning, asynchronous execution, and limited computing are treated as part of the autonomy problem. The goal is not simply faster inference, but reliable closed-loop behavior while the physical and social environment continues to change.
+
+- title: "Evaluation and Validation for Trustworthy Deployment"
   keywords_tag: evaluation
   slug: evaluation
-  tagline: "Scalable evaluation via generative simulation, diffusion models, and benchmarks"
+  tagline: "Building evidence that reveals when, where, and why an autonomous system can or cannot be trusted"
   image: evaluation.jpg
   description: |
-    Autonomous systems must operate safely in complex human environments, but real-world testing is limited and risky. We develop scalable evaluation methods — including **generative simulation** for interactive environments, **diffusion models** for trajectory prediction and scenario generation, and **off-policy evaluation** techniques — to rigorously assess autonomous system performance before deployment. We also build **benchmarks and datasets** for driving reasoning to enable standardized evaluation across the community.
+    Reliable and efficient evaluation remains a key bottleneck to deploying physical AI systems in open-world environments. A single aggregate score or a small set of real-world tests cannot establish readiness across diverse operating conditions. We integrate generative simulation, sample-efficient evaluation and diagnosis, and human-interaction benchmarks into a unified validation pipeline. This pipeline uses limited real-world data efficiently, expands coverage beyond observed conditions, and exposes risks hidden by aggregate metrics. Together, these components provide practitioners and stakeholders with evidence for informed deployment decisions.
 
-- title: "Adaptive Autonomy for Human Environments"
+- title: "Continual and Personalized Adaptation from Deployment Experience"
   keywords_tag: adaptation
   slug: adaptation
-  tagline: "Online policy customization via residual RL, imitation learning, and human-aware control"
+  tagline: "Adapting deployed systems to new conditions and human objectives while preserving prior capabilities"
   image: adaptation.jpg
   description: |
-    Learning-based autonomous systems must adapt to human behavior, safety constraints, and changing objectives during deployment. We develop methods that combine **residual reinforcement learning** with control theory for online policy customization, enable **offline-to-online RL** for safe deployment, and leverage **imitation learning** from human demonstrations. Our work also explores how **foundation models** can operate under real-time control constraints to produce robust, human-aware autonomy.
-
-- title: "Autonomous Systems in Infrastructure Networks"
-  keywords_tag: infrastructure
-  slug: infrastructure
-  tagline: "Cooperative driving, language communication, and system-level optimization"
-  image: infrastructure.jpg
-  description: |
-    When autonomous systems deploy at scale, they interact with large-scale transportation and infrastructure systems. We study how autonomous agents affect and integrate into these networks through **cooperative autonomous driving** via language communication, **infrastructure-aware autonomy**, and **system-level optimization** for safety and efficiency in human-AI mobility systems.
+    No fixed policy can anticipate every environment, task, or user objective it will encounter after deployment. We develop model-based planning, residual reinforcement learning, and continual learning for targeted policy adaptation. Human interventions guide personalized updates, while policy composition reuses existing capabilities for new tasks. Together, these methods support adaptation at multiple timescales, from online refinement of robot behavior to continual updates of foundation-model-based policies.

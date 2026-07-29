@@ -29,12 +29,18 @@ permalink: /lab/research/
   letter-spacing: -0.01em;
 }
 
+/* Page width (nav, content, footer); thrust titles may wrap to two lines */
+.container { max-width: 1280px; }
+
 /* Card grid */
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0;
+}
+@media (max-width: 768px) {
+  .research-grid { grid-template-columns: 1fr; }
 }
 
 .research-card {
@@ -76,22 +82,17 @@ html[data-theme="dark"] .research-card.active {
 
 .research-card .card-image {
   width: 100%;
-  height: 200px;
   overflow: hidden;
-  background: #e9ecef;
+  background: #ffffff;
 }
 html[data-theme="dark"] .research-card .card-image {
-  background: #2a2a3c;
+  background: #ffffff;
 }
 
 .research-card .card-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-.research-card:hover .card-image img {
-  transform: scale(1.05);
+  height: auto;
+  display: block;
 }
 
 .research-card .card-body {
@@ -213,7 +214,7 @@ html[data-theme="dark"] .research-detail .pub-section-label {
   <div class="lab-name">Trustworthy Autonomous Mobility System Lab</div>
 </div>
 
-Our research focuses on enabling the **safe deployment of learning-based autonomous systems interacting with humans**. We study challenges across the deployment pipeline: evaluating systems before deployment, building adaptive autonomy for human environments, and integrating autonomous systems into infrastructure networks.
+**TAMS Lab studies the path from advances in AI to real-world autonomy**, bridging frontier AI models and autonomous systems that can operate safely and reliably in open-world environments shared with people. Moving AI into the physical world requires more than capable models. It requires coupling AI with sensing, decision-making, and control under real-time constraints, physical uncertainty, limited onboard computing, and continual interaction with people and other agents. **We approach deployment as a continuous cycle: build systems that can act in real time, evaluate their readiness for target deployment conditions, and adapt them after deployment as environments, tasks, and human objectives change.** Across this cycle, we develop fundamental and practical methods at the intersection of AI, robotics, and control, with focal applications in autonomous driving, social robot navigation, and manipulation.
 
 <div class="research-grid">
   {% for area in site.data.lab_research %}
@@ -231,14 +232,29 @@ Our research focuses on enabling the **safe deployment of learning-based autonom
   {% endfor %}
 </div>
 
-<!-- Evaluation detail -->
-<div class="research-detail" id="detail-evaluation">
+<!-- Developing Physical AI Systems for Real-Time Autonomy detail -->
+<div class="research-detail" id="detail-realtime">
   <div class="detail-header">
-    <h3>Evaluating Autonomous Systems Before Deployment</h3>
+    <h3>Developing Physical AI Systems for Real-Time Autonomy</h3>
     <button class="detail-close" onclick="closeDetail()">&times;</button>
   </div>
   <div class="detail-description">
-    <p>Autonomous systems must operate safely in complex human environments, but real-world testing is limited and risky. We develop scalable evaluation methods — including <strong>generative simulation</strong> for interactive environments, <strong>diffusion models</strong> for trajectory prediction and scenario generation, and <strong>off-policy evaluation</strong> techniques — to rigorously assess autonomous system performance before deployment. We also build <strong>benchmarks and datasets</strong> for driving reasoning to enable standardized evaluation across the community.</p>
+    <p>Frontier AI models offer powerful capabilities for perception, reasoning, and action, but their computation can be too slow and unpredictable for physical systems with limited onboard resources. A robot cannot pause the world while waiting for inference or communication to finish. <strong>We co-design AI models and closed-loop control systems so delayed reasoning, asynchronous execution, and limited computing are treated as part of the autonomy problem.</strong> The goal is not simply faster inference, but reliable closed-loop behavior while the physical and social environment continues to change.</p>
+  </div>
+  <div class="pub-section-label">Selected Publications</div>
+  <div class="publications compact-bib">
+    {% bibliography --query @*[keywords=realtime]* %}
+  </div>
+</div>
+
+<!-- Evaluation and Validation for Trustworthy Deployment detail -->
+<div class="research-detail" id="detail-evaluation">
+  <div class="detail-header">
+    <h3>Evaluation and Validation for Trustworthy Deployment</h3>
+    <button class="detail-close" onclick="closeDetail()">&times;</button>
+  </div>
+  <div class="detail-description">
+    <p>Reliable and efficient evaluation remains a key bottleneck to deploying physical AI systems in open-world environments. A single aggregate score or a small set of real-world tests cannot establish readiness across diverse operating conditions. <strong>We integrate generative simulation, sample-efficient evaluation and diagnosis, and human-interaction benchmarks into a unified validation pipeline.</strong> This pipeline uses limited real-world data efficiently, expands coverage beyond observed conditions, and exposes risks hidden by aggregate metrics. Together, these components provide practitioners and stakeholders with evidence for informed deployment decisions.</p>
   </div>
   <div class="pub-section-label">Selected Publications</div>
   <div class="publications compact-bib">
@@ -246,33 +262,18 @@ Our research focuses on enabling the **safe deployment of learning-based autonom
   </div>
 </div>
 
-<!-- Adaptation detail -->
+<!-- Continual and Personalized Adaptation from Deployment Experience detail -->
 <div class="research-detail" id="detail-adaptation">
   <div class="detail-header">
-    <h3>Adaptive Autonomy for Human Environments</h3>
+    <h3>Continual and Personalized Adaptation from Deployment Experience</h3>
     <button class="detail-close" onclick="closeDetail()">&times;</button>
   </div>
   <div class="detail-description">
-    <p>Learning-based autonomous systems must adapt to human behavior, safety constraints, and changing objectives during deployment. We develop methods that combine <strong>residual reinforcement learning</strong> with control theory for online policy customization, enable <strong>offline-to-online RL</strong> for safe deployment, and leverage <strong>imitation learning</strong> from human demonstrations. Our work also explores how <strong>foundation models</strong> can operate under real-time control constraints to produce robust, human-aware autonomy.</p>
+    <p>No fixed policy can anticipate every environment, task, or user objective it will encounter after deployment. <strong>We develop model-based planning, residual reinforcement learning, and continual learning for targeted policy adaptation.</strong> Human interventions guide personalized updates, while policy composition reuses existing capabilities for new tasks. Together, these methods support adaptation at multiple timescales, from online refinement of robot behavior to continual updates of foundation-model-based policies.</p>
   </div>
   <div class="pub-section-label">Selected Publications</div>
   <div class="publications compact-bib">
     {% bibliography --query @*[keywords=adaptation]* %}
-  </div>
-</div>
-
-<!-- Infrastructure detail -->
-<div class="research-detail" id="detail-infrastructure">
-  <div class="detail-header">
-    <h3>Autonomous Systems in Infrastructure Networks</h3>
-    <button class="detail-close" onclick="closeDetail()">&times;</button>
-  </div>
-  <div class="detail-description">
-    <p>When autonomous systems deploy at scale, they interact with large-scale transportation and infrastructure systems. We study how autonomous agents affect and integrate into these networks through <strong>cooperative autonomous driving</strong> via language communication, <strong>infrastructure-aware autonomy</strong>, and <strong>system-level optimization</strong> for safety and efficiency in human-AI mobility systems.</p>
-  </div>
-  <div class="pub-section-label">Selected Publications</div>
-  <div class="publications compact-bib">
-    {% bibliography --query @*[keywords=infrastructure]* %}
   </div>
 </div>
 
