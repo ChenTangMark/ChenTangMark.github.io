@@ -20,8 +20,9 @@ permalink: /lab/research/
   margin-bottom: 1.5rem;
 }
 .lab-hero img {
-  height: 140px;
-  width: auto;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
 }
 .lab-hero .lab-name {
   font-size: 1.5rem;
