@@ -37,6 +37,11 @@ members:
     image: rui_gao.png
     website: https://rwigie.github.io/
     email: rgao727@ucla.edu
+  - name: Bingan Chen
+    title: Master's Student
+    image: bingan_chen.jpg
+    website: https://bingan.dev
+    email: bac@ucla.edu
   - name: Jonathan Li
     title: Undergraduate Researcher
     image: jonathan_li.png
