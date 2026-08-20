@@ -122,6 +122,9 @@ ninja.data = [{
           section: "News",},{id: "news-the-paper-simple-recipe-works-received-the-best-paper-award-at-the-icra-2026-workshop-on-reinforcement-learning-in-the-era-of-imitation-learning-rl4il-checkout-the-paper-and-code",
           title: 'The paper “Simple Recipe Works” received the Best Paper Award at the ICRA...',
           description: "",
+          section: "News",},{id: "news-the-paper-simple-recipe-works-received-the-outstanding-paper-award-for-resourcefulness-in-rl-at-the-reinforcement-learning-conference-rlc-2026-check-out-the-paper-and-code",
+          title: 'The paper “Simple Recipe Works” received the Outstanding Paper Award for Resourcefulness in...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
