@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The paper "Simple Recipe Works" received the **Outstanding Paper Award for Resourcefulness in RL** at the Reinforcement Learning Conference (RLC) 2026! Check out the [paper](https://arxiv.org/abs/2603.11653) and [code](https://github.com/UT-Austin-RobIn/continual-vla-rl).
+The paper "Simple Recipe Works" received the Outstanding Paper Award for Resourcefulness in RL at the Reinforcement Learning Conference (RLC) 2026!
