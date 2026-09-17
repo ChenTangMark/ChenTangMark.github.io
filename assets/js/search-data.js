@@ -131,6 +131,9 @@ ninja.data = [{
           section: "News",},{id: "news-two-papers-scape-on-simulation-augmented-policy-evaluation-and-discretertc-on-asynchronous-execution-of-discrete-diffusion-policies-are-accepted-for-corl-2026",
           title: 'Two papers, SCAPE on simulation-augmented policy evaluation and DiscreteRTC on asynchronous execution of...',
           description: "",
+          section: "News",},{id: "news-dr-tang-will-serve-as-an-area-chair-for-iclr-2027",
+          title: 'Dr. Tang will serve as an Area Chair for ICLR 2027.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
