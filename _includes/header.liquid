@@ -70,6 +70,9 @@
             <li class="nav-item {% if page.url contains '/lab/publications' %}active{% endif %}">
               <a class="nav-link" href="{{ '/lab/publications/' | relative_url }}">Publications</a>
             </li>
+            <li class="nav-item {% if page.url contains '/lab/teaching' %}active{% endif %}">
+              <a class="nav-link" href="{{ '/lab/teaching/' | relative_url }}">Teaching</a>
+            </li>
             {% comment %} Photos tab hidden for now
             <li class="nav-item {% if page.url contains '/lab/photos' %}active{% endif %}">
               <a class="nav-link" href="{{ '/lab/photos/' | relative_url }}">Photos</a>

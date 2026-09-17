@@ -188,6 +188,7 @@ exclude:
   - README.md
   - readme_preview/
   - assets/jupyter/
+  - tmp/
   - vendor
 keep_files:
   - CNAME
