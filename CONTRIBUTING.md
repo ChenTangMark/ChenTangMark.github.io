@@ -23,8 +23,8 @@ Open <http://localhost:8080/lab/> and check the affected pages. To stop the prev
 
 ## Publishing reviewed changes
 
-This repository is the collaboration copy. The live website is published from [`ChenTangMark/ChenTangMark.github.io`](https://github.com/ChenTangMark/ChenTangMark.github.io), and its URL remains <https://chentangmark.github.io/lab/>. Merging a pull request here does not publish it automatically.
+After Chen reviews and merges a pull request into this repository's `main` branch, the original website repository checks for updates approximately every 10 minutes, merges them, and starts its deployment workflow. GitHub may delay scheduled runs. The live URL remains <https://chentangmark.github.io/lab/>.
 
-After reviewing and merging an update here, Chen can [open an upstream pull request](https://github.com/ChenTangMark/ChenTangMark.github.io/compare/main...ucla-tams-lab:lab-website:main?expand=1), inspect the changes, and merge it into the original repository. Its existing deployment workflow then publishes the website. Confirm the deployment succeeded and check the live page.
+No second pull request is needed. Chen can also run [Sync reviewed lab website updates](https://github.com/ChenTangMark/ChenTangMark.github.io/actions/workflows/sync-lab-website.yml) manually. If changes conflict with edits made in the original repository, synchronization stops without overwriting either side; Chen resolves the conflict and reruns it. Check the sync and deployment results before treating an update as published.
 
 Keep this fork up to date with the original repository before starting new work. Inherited GitHub Actions are disabled in this collaboration repository; use the local preview to check changes.
