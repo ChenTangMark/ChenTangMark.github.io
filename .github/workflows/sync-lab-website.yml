@@ -1,0 +1,52 @@
+name: Sync reviewed lab website updates
+
+on:
+  schedule:
+    - cron: "7,17,27,37,47,57 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-lab-website
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'ChenTangMark/ChenTangMark.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the published source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Merge reviewed lab updates
+        id: merge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch https://github.com/ucla-tams-lab/lab-website.git main
+          lab_head=$(git rev-parse FETCH_HEAD)
+          if git merge-base --is-ancestor "$lab_head" HEAD; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Lab updates are already synchronized." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if ! git merge --no-edit "$lab_head"; then
+            git merge --abort
+            echo "::error::Lab updates conflict with the original repository. Resolve the conflict before retrying."
+            exit 1
+          fi
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Synchronized lab commit $lab_head into main." >> "$GITHUB_STEP_SUMMARY"
+      - name: Deploy the synchronized website
+        if: steps.merge.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --repo "$GITHUB_REPOSITORY" --ref main
