@@ -1,28 +1,30 @@
-# Contributing to al-folio
+# Contributing to the TAMS Lab Website
 
-Thank you for considering contributing to al-folio!
+Submit updates to [ucla-tams-lab/lab-website](https://github.com/ucla-tams-lab/lab-website). Chen reviews changes before publication.
 
-## Pull Requests
+## Submit an update
 
-We welcome your pull requests (PRs).
-For minor fixes (e.g., documentation improvements), feel free to submit a PR directly.
-If you would like to implement a new feature or a bug, please make sure you (or someone else) has opened an appropriate issue first; in your PR, please mention the issue it addresses.
+1. Fork this repository to your GitHub account and create a branch for your changes. For a small text edit, you can also open the file on GitHub and use the pencil icon to propose a change.
+2. Edit the relevant files listed in the [README](README.md). Follow the format of nearby entries and include any images needed by your update.
+3. Open a pull request with **base repository `ucla-tams-lab/lab-website`** and **base branch `main`**. GitHub may select the original website repository by default, so check the destination.
+4. Briefly explain what changed. Include a screenshot for visual changes and mention any links or pages you checked. Chen will review the pull request and coordinate publication.
 
-Note that since [#2048](https://github.com/alshedivat/al-folio/pull/2048) al-folio uses the [prettier formatter](https://prettier.io/) for its code, meaning all new submitted code must conform to its standard. If you don't have `prettier` installed for your setup and the `prettier` code check fails when submitting a PR, you can check the referred failed action in our repo. In that action there will be an artifact with an HTML diff showing the needed changes.
+Keep each pull request focused on one update. Publication metadata is shared with Chen's personal site; take care to preserve existing entries. Upload only material intended for the public website.
 
-## Issues
+## Preview locally
 
-We use GitHub issues to track bugs and feature requests.
-Before submitting an issue, please make sure:
+With Docker running, run this command from the repository directory:
 
-1. You have read [the FAQ section](FAQ.md) of the README and your question is NOT addressed there.
-2. You have done your best to ensure that your issue is NOT a duplicate of one of [the previous issues](https://github.com/alshedivat/al-folio/issues).
-3. Your issue is either a bug (unexpected/undesirable behavior) or a feature request.
-   If it is just a question, please ask it in the [Discussions](https://github.com/alshedivat/al-folio/discussions) forum.
+```sh
+docker compose up -d
+```
 
-When submitting an issue, please make sure to use the appropriate template.
+Open <http://localhost:8080/lab/> and check the affected pages. To stop the preview, run `docker compose down`.
 
-## License
+## Publishing reviewed changes
 
-By contributing to al-folio, you agree that your contributions will be licensed
-under the LICENSE file in the root directory of the source tree.
+After Chen reviews and merges a pull request into this repository's `main` branch, the original website repository checks for updates approximately every 10 minutes, merges them, and starts its deployment workflow. GitHub may delay scheduled runs. The live URL remains <https://chentangmark.github.io/lab/>.
+
+No second pull request is needed. Chen can also run [Sync reviewed lab website updates](https://github.com/ChenTangMark/ChenTangMark.github.io/actions/workflows/sync-lab-website.yml) manually. If changes conflict with edits made in the original repository, synchronization stops without overwriting either side; Chen resolves the conflict and reruns it. Check the sync and deployment results before treating an update as published.
+
+Keep this fork up to date with the original repository before starting new work. Inherited GitHub Actions are disabled in this collaboration repository; use the local preview to check changes.
