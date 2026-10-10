@@ -134,6 +134,9 @@ ninja.data = [{
           section: "News",},{id: "news-dr-tang-will-serve-as-an-area-chair-for-iclr-2027",
           title: 'Dr. Tang will serve as an Area Chair for ICLR 2027.',
           description: "",
+          section: "News",},{id: "news-dr-tang-will-serve-as-an-associate-editor-for-ieee-robotics-and-automation-letters-ra-l-in-robot-learning",
+          title: 'Dr.Tang will serve as an Associate Editor for IEEE Robotics and Automation Letters...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
