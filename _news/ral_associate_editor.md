@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Dr. Tang is serving as an Associate Editor for IEEE Robotics and Automation Letters (RA-L) in the area of Robot Learning.
+Dr.Tang will serve as an Associate Editor for IEEE Robotics and Automation Letters (RA-L) in Robot Learning.
